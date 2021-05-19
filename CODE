@@ -1,0 +1,99 @@
+I ONLY GOT 9/10
+
+
+
+
+import java.util.Scanner; 
+
+public class LabProgram {
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner(System.in); 
+      String inputMonth;
+
+    int inputDay;
+
+    int season;
+
+    inputMonth = scnr.next();
+
+    inputDay = scnr.nextInt();
+
+    if (inputDay <= 0 || inputDay > 31) {
+      System.out.println("Invalid");
+      return;
+    }
+
+    switch (inputMonth) {
+      case "January":
+        System.out.println("Winter");
+        break;
+      case "February":
+        if (inputDay > 28) {
+          System.out.println("Invalid");
+        } else {
+          System.out.println("Winter");
+        }
+        break;
+      case "March":
+        if (inputDay <= 19) {
+          System.out.println("Winter");
+        } else {
+          System.out.println("Spring");
+        }
+        break;
+      case "April":
+        if (inputDay == 31) {
+          System.out.println("Invalid");
+        } else {
+          System.out.println("Spring");
+        }
+        break;
+      case "May":
+        System.out.println("Spring");
+        break;
+      case "June":
+        if (inputDay <= 20) {
+          System.out.println("Spring");
+        } else {
+          System.out.println("Summer");
+        }
+        break;
+      case "July":
+      case "August":
+        System.out.println("Summer");
+        break;
+      case "September":
+        if (inputDay >= 22) {
+          if (inputDay == 31) {
+            System.out.println("Invalid");
+          } else {
+            System.out.println("Autumn");
+          }
+        } else {
+          System.out.println("Summer");
+        }
+      case "October":
+        System.out.println("Autumn");
+        break;
+
+      case "November":
+        if (inputDay == 31) {
+          System.out.println("Invalid");
+        } else {
+          System.out.println("Autumn");
+        }
+        break;
+      case "December":
+        if (inputDay <= 20) {
+          System.out.println("Autumn");
+        } else {
+          System.out.println("Winter");
+        }
+        break;
+
+      default:
+        System.out.println("Invalid");
+        break;
+    }
+   }
+}
